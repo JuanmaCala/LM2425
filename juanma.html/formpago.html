@@ -5,58 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de pago</title>
 </head>
-<body>
-    <fieldset>
-        <legend>Información del contacto</legend>
-
+    <body>
         <fieldset>
-            <legend>Profesión</legend>
-            <input type="radio" name="Profesión"id="">Profesor/a<br>
-            <input type="radio" name="Profesión"id="">Estudiante<br>
-            <input type="radio" name="Profesión"id="">Otro<br>
-        </fieldset>
+            <legend>FORMULARIO DE PAGO (Los campos obligatorios se han marcado con *)</legend>
+            <fieldset>
+                <legend>Información del contacto</legend>
 
-        <fieldset>
-            <legend>Tratamiento</legend>
-            <input type="radio" name="Tratamiento"id="">Sr/Sra<br>
-            <input type="radio" name="Tratamiento"id="">Dr/Dra<br>
-            <input type="radio" name="Tratamiento"id="">Otro<br>
-        </fieldset>
+                <fieldset>
+                    <legend>Profesión</legend>
+                    <input type="radio" name="Profesión"id="">Profesor/a<br>
+                    <input type="radio" name="Profesión"id="">Estudiante<br>
+                    <input type="radio" name="Profesión"id="">Otro<br>
+                </fieldset>
 
-        <label for="">Nombre: *</label><br>
-        <input type="text" name="Nombre" ><br>
+                <fieldset>
+                    <legend>Tratamiento</legend>
+                    <input type="radio" name="Tratamiento"id="">Sr/Sra<br>
+                    <input type="radio" name="Tratamiento"id="">Dr/Dra<br>
+                    <input type="radio" name="Tratamiento"id="">Otro<br>
+                </fieldset>
 
-        <label for="">Correo: *</label><br>
-        <input type="text" name="Nombre" ><br>
+                <label for="">Nombre: *</label><br>
+                <input type="text" name="Nombre" required><br>
 
-        <label for="">Número teléfono: *</label><br>
-        <input type="text" name="Nombre" ><br>
+                <label for="">Correo: *</label><br>
+                <input type="text" name="Nombre" required><br>
 
-        <label for="">Contraseña: *</label><br>
-        <input type="text" name="Nombre" ><br>
+                <label for="">Número teléfono: *</label><br>
+                <input type="text" name="Nombre" required><br>
 
-    </fieldset>
+                <label for="">Contraseña: *</label><br>
+                <input type="text" name="Nombre" required><br>
 
-    <fieldset>
-        <legend>Información de pago</legend>
+            </fieldset><br>
 
-        <p>Tipo de tarjeta:</p>
-        <select name="Tarjeta" id="Tarjeta">
-            <option value="Visa">Visa</option>
-            <option value="Paysafecard">Paysafecard</option>
-            <option value="Virtual">Virtual</option>
-        </select>
+            <fieldset>
+                <legend>Información de pago</legend>
 
-        <label for="">Número de tarjeta: *</label><br>
-        <input type="text" name="Nombre" ><br>
+                <p>Tipo de tarjeta:</p>
+                <select name="Tarjeta" id="Tarjeta">
+                    <option value="Visa">Visa</option>
+                    <option value="Paysafecard">Paysafecard</option>
+                    <option value="Virtual">Virtual</option>
+                </select>
 
-        <label for="">Fecha de caducidad: *</label><br>
-        <input type="text" name="fecha" id="" value="dd/mm/aaaa"><br>
+                <label for="">Número de tarjeta: *</label><br>
+                <input type="text" name="Nombre" ><br>
 
-        <label for="">Cuenta de paypal: *</label><br>
-        <input type="text" name="Nombre" ><br>
-    </fieldset>
-</body>
+                <label for="">Fecha de caducidad: *</label><br>
+                <input type="text" name="fecha" id="" value="dd/mm/aaaa"><br>
+
+                <label for="">Cuenta de paypal: *</label><br>
+                <input type="text" name="Nombre" ><br>
+
+                <p>Método de pago preferido:</p>
+                <select name="Tarjeta" id="Tarjeta">
+                    <option value="Credito">Tarjeta de credito</option>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="prepago">Tarjeta de prepago</option>
+                </select>
+
+            </fieldset>
+            <button style="background-color:  #716d6c ;">Validar el pago</button>
+        </fieldset>    
+    </body>
 </html>
 
 
