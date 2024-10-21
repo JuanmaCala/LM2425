@@ -1,0 +1,39 @@
+3. Preguntas para reflexionar:
+
+    ○ ¿Qué diferencias encontraste entre los tres métodos de aplicar CSS?
+
+        En línea: Se aplica en el elemento.
+
+        Interno: Se coloca en el <head>, Solo para esta página.
+
+        Externo: En un archivo separado, Se usa en varias páginas.
+
+    ○ ¿Qué ventajas ves en usar CSS externo frente a los otros métodos?
+
+        Es mas facil ya que se puede reutilizar las páginas y es mas facil de mantener.
+
+    ○ ¿Por qué usarías una clase en lugar de un id?
+
+        En las clases puedes usarla en varios elementos y en las IDs solo se puede usar en uno.
+
+    ○ Si cambias el estilo de h2 en el CSS, ¿cómo afecta eso a otros encabezados h2 en la página?
+
+        Cambiar el estilo de h2 afectará a todos los encabezados <h2> en la página. 
+
+    ○ ¿Qué diferencias hay entre alinear texto usando CSS y hacerlo con HTML?
+
+        CSS es más flexible y se puede aplicar a varios elementos y HTML Es menos recomendado porque no separa el contenido del estilo.
+
+    ○ ¿Cómo cambiarías los márgenes o el padding para mejorar el diseño de los párrafos?
+
+        Márgenes: Usas margin para separar el párrafo de otros elementos
+
+        Padding: Usas padding para crear espacio entre el texto y el borde del párrafo.
+
+    ○ ¿Por qué los selectores combinados son útiles?
+
+        Precisión: Te permiten seleccionar elementos específicos según su relación con otros, evitando aplicar estilos a todos los elementos.
+
+    ○ ¿Cómo afecta la estructura HTML a los selectores que puedes usar?
+
+        Jerarquía: La forma en que están organizados los elementos determina qué selectores puedes usar. 
