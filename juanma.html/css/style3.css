@@ -1,0 +1,110 @@
+aside {
+    background-color: rgb(7, 90, 90); 
+    color: white;
+    width: 250px;
+    float: left; /* Flotante a la izquierda. */
+    height: 900px; 
+    border-radius: 5px; 
+    margin-top: 3px; /* Espacio superior. */
+    font-family: helvetica, arial, sans-serif;
+}
+
+.elementos {
+    margin: 20px;
+    border-bottom: white solid 1px; /* borde inferior */
+}
+
+section {
+    background-color: rgb(36, 97, 36);
+    color: white;
+    float: right; /* Flotante en la derecha */
+    margin-top: 3px; /* Espacio superior */
+    border-radius: 5px;
+    width: 995px;
+    height: 900px;
+}
+
+h1 {
+    font-family: helvetica, arial, sans-serif;
+}
+
+h2 {
+    margin: 30px; /* Margen de 30px. */
+    font-family: helvetica, arial, sans-serif;
+    font-size: 30px;
+}
+
+img {
+    height: auto;
+    width: 200px; 
+    margin-left: 30px;
+    margin-bottom: 1px;
+    border-radius: 10px;
+    border-style: solid; /* Borde sólido */
+    border-color: darkgoldenrod;
+}
+
+
+.parriba {
+    display: flex; /* Para alinear elementos y sea flexible*/
+    width: 800px; 
+    position: absolute; /* Posición absoluta dentro de las casillas */
+    top: 260px; /* Posición de texto de arriba desde arriba */
+    left: 520px; /* Posición de texto de arriba desde la izquierda */
+    font-size: 17px;
+    font-family: helvetica, arial, sans-serif;
+}
+
+.pabajo {
+    margin: 30px; /* Margenes de texttos */
+    font-size: 17px; /* Tamaño de la fuente p */
+    font-family: helvetica, arial, sans-serif;
+}
+
+.pabajo::first-letter {
+    font-size: 30px; /* Tamaño de la primera letra */
+    color: gray;
+}
+
+.parriba::first-letter {
+    font-size: 30px; /* Tamaño de la primera letra. */
+    color: gray; /* Color primera letra */
+}
+
+footer {
+    background-color: darkgoldenrod;
+    margin-top: 5px; /* Espacio superior */
+    float: inline-end; /* Flotante */
+    width: 1250px; 
+    height: 50px; 
+    color: white;
+    text-align: center; /* Alineación centrada del texto */
+    border-radius: 5px; /* bordes de esquinaas */
+    font-family: helvetica, arial, sans-serif;
+}
+
+footer:hover {
+    filter: brightness(50%); /* Oscurece pie de pag al pasar el ratón.*/
+}
+
+@media (max-width: 700px) {
+    .body {
+        flex-direction: column;
+    }
+    .aside {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+}
+
+header {
+    background-color: rgb(196, 195, 195);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
