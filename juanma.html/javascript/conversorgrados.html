@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Grados</title>
+</head>
+<body>
+    <h1>Conversor Grados</h1>
+    <input type="text" id="grados">
+    <button onclick="convertir_a_celcius()">Convertir a Celsius</button>
+    <button onclick="convertir_a_farenheit()">Convertir a Farenheit</button>
+    <p id="resultado"></p>
+    <script>
+        function convertir_a_celcius(){
+            let grados = parseFloat(document.getElementById("grados").value);
+            let resultado = (grados-32)/1.8;
+            if (isNaN(resultado)){
+                document.getElementById("resultado").innerHTML = "Debes introducir un numero"
+            }
+            else {  
+            document.getElementById("resultado").innerHTML = "La coversion a celcius resultada:" + resultado
+            }
+        }
+
+        function convertir_a_farenheit(){
+            let grados = parseFloat(document.getElementById("grados").value);
+            let resultado = grados * (9/5) + 32
+            if (isNaN(resultado)){
+                document.getElementById("resultado").innerHTML = "Debes introducir un numero"
+            }
+            else {  
+            document.getElementById("resultado").innerHTML = "La coversion a celcius resultada:" + resultado
+            }
+        }
+    </script>
+</body>
+</html>

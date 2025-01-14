@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indice Masa Corporal</title>
+</head>
+<body>
+
+    <h1>Indice Masa Corporal</h1>
+    <input type="text" id="peso" placeholder="Peso en KG">
+    <input type="text" id="altura" placeholder="Altura en M">
+    <button onclick="Saber_tu_IMC()">Saber tu IMC</button>
+    <p id="resultado"></p>
+    <script>
+        function Saber_tu_IMC(){
+            let peso = parseFloat(document.getElementById("peso").value);
+            let altura = parseFloat(document.getElementById("altura").value);
+            if (isNaN(peso) || isNaN(altura)){
+                document.getElementById("resultado").innerHTML = "Debes introducir valores numericos"
+            }
+            else {  
+            let resultado = (peso/(altura*altura));
+            document.getElementById("resultado").innerHTML = "Tu IMC es:" + resultado
+            }
+        }
+    </script>
+</body>
+</html>
