@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area del Circulo</title>
+</head>
+<body>
+    <h1>Area del Circulo</h1>
+
+        <label for="pi">pi:</label>
+        <input type="text" id="pi">
+
+        <label for="radio">radio:</label>
+        <input type="text" id="radio"><br><br>
+
+        <button onclick="area()">Calcular Area del Circulo:</button>
+        <p id="resultado"></p>
+
+    <script>
+        function area(){
+
+            let pi = parseFloat(document.getElementById("radio").value);
+            let radio = parseFloat(document.getElementById("pi").value);
+            
+            if(isNaN(pi) || isNaN(radio)){
+                    document.getElementById("resultado").innerHTML = "Debes introducir valores numéricos"
+                }
+
+            else {
+                let resultado = pi * radio * radio;
+                document.getElementById("resultado").innerHTML = "El area de este circulo es: " + resultado
+                }
+            }
+
+    </script>
+</body>
+</html>
+	

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones</title>
+</head>
+
+<body>
+
+    <h1>Calificaciones</h1>
+    <label for="Matematicas">Matematicas:</label>
+    <input type="text" id="Matematicas">
+
+    <label for="Lengua">Lengua :</label>
+    <input type="text" id="Lengua">
+
+    <label for="Biologia"> Biologia :</label>
+    <input type="text" id="Biologia">
+
+    <label for="Ingles">Ingles :</label>
+    <input type="text" id="Ingles"><br><br>
+
+    <button onclick="Calcularmedia()">Media de Módulos:</button>
+    <p id="resultado"></p>
+    <button onclick="ap_susp()">Aprobados-Suspensos:</button>
+    <p id="resultado1"></p>
+
+
+    <script>
+        function Calcularmedia() {
+            let Matematicas = parseFloat(document.getElementById("Matematicas").value);
+            let Lengua = parseFloat(document.getElementById("Lengua").value);
+            let Biologia = parseFloat(document.getElementById("Biologia").value);
+            let Ingles = parseFloat(document.getElementById("Ingles").value);
+
+            let aprobado = 0;
+            let suspenso = 0;
+
+            if (isNaN(Matematicas) || isNaN(Lengua) || isNaN(Biologia) || isNaN(Ingles)) {
+                document.getElementById("resultado").innerHTML = "Debes introducir valores numéricos"
+
+            }
+        
+            if (Matematicas < 5) {
+                    suspenso = suspenso + 1
+                }
+    
+
+            else {
+                let resultado = (Matematicas + Lengua + Biologia + Ingles) / 4;
+                document.getElementById("resultado").innerHTML = "Tu media de Módulos es: " + resultado.toFixed(2);
+            }
+        }
+    </script>
+</body>
+</html>
