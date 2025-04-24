@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 8</title>
+    <script src="jquery-3.7.1.js"></script> 
+</head>
+<body>
+    
+    <h1 id="intro">Introduccion jQuery 8</h1>
+    <h1>O</h1>
+    
+    <p>Parrafo Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi totam doloribus, corrupti soluta doloremque suscipit molestiae inventore ut at repudiandae libero, eligendi aliquid iusto illo in rem animi quibusdam id?</p>
+    <p class="par">Esto es un parrafo de ejemplo para ver que cosas hace jQuery...</p>
+    <p>Otro Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia eaque odit pariatur provident sit vero impedit omnis quod, mollitia velit aspernatur necessitatibus magni doloribus qui tenetur enim inventore? Quod, voluptate?</p>
+    <p class="par">Otro Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nostrum, quod, obcaecati nobis culpa temporibus consectetur laboriosam aut consequatur nihil a.</p>
+    
+    <!-- Imagen para probar .attr('src') -->
+    <img id="miImagen" src="https://picsum.photos/300" alt="Imagen de ejemplo">
+    <br><br>
+
+    <button id="boton1">Obtener src de la imagen</button>
+    <button id="boton2">Obtener HTML del encabezado</button>
+    <button id="boton3">Obtener HTML de un párrafo</button>
+
+<script>
+
+$(document).ready(function() {
+    // Obtener el atributo src de la imagen
+    $("#boton1").click(function() {
+        let src = $("#miImagen").attr("src");
+        alert("La ruta de la imagen es:\n" + src);
+    });
+
+    // Obtener el contenido HTML del encabezado h1 con id="intro"
+    $("#boton2").click(function() {
+        let html = $("#intro").html();
+        alert("El HTML del encabezado es:\n" + html);
+    });
+
+    // Obtener el contenido HTML del primer párrafo con clase .par
+    $("#boton3").click(function() {
+        let html = $(".par").first().html();
+        alert("El HTML del párrafo es:\n" + html);
+    });
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 9</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+<body>
+
+    <h1>Lista de enlaces con enlaces de ícono de descarga</h1>
+    
+    <a id="a1" href="">Descargar archivo 4</a>
+    <button id="boton1">Imagen 1</button><br><br>
+
+    <a id="a2" href="">Descargar archivo 4</a>
+    <button id="boton2">Imagen 2</button><br><br>
+
+    <a id="a3"href="">Descargar archivo 4</a>
+    <button id="boton3">Imagen 3</button>
+
+    <script>
+        $(document).ready(function() {
+           $("#boton1").click(function(){
+                $("#a1").attr("href", "icono1.png")
+           })
+           $("#boton2").click(function(){
+                $("#a2").attr("href", "icono2.png")
+           })
+           $("#boton3").click(function(){
+                $("#a3").attr("href", "icono3.png")
+           })
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 4</title>
+    <script src="jquery-3.7.1.js"></script> 
+</head>
+<body>
+    
+    <h1 id="intro">Introduccion jQuery 4</h1>
+    <h1>Colores</h1>
+    <p>Parrafo Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum sapiente culpa obcaecati rerum. Tenetur fuga voluptatum dolore corporis voluptate recusandae sint aperiam optio dignissimos corrupti? Consequuntur animi illo ea.</p>
+    <p class="par">Esto es un parrafo de ejemplo para ver que cosas hace jQuery. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis illo quia laborum, commodi similique. Quia laudantium iusto eius perferendis, aut aspernatur voluptatum dolores molestias qui facere? Ratione, atque nulla.</p>
+    <p>Otro Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem sequi fugit eveniet explicabo molestias distinctio rerum deserunt mollitia aspernatur tempore. Earum dignissimos distinctio sunt omnis voluptas quibusdam non repellat illum?</p>
+    <p class="par">Otro parrafo Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quasi laboriosam quibusdam praesentium. Voluptates neque repellat cumque hic aliquam, voluptatem, fugiat labore dolorem illo vero magnam at est, eligendi sunt.</p>
+    
+    <button id="boton1">Rojo(Pequeño)</button>
+    <button id="boton2">AZUL(Grande)</button>
+
+    <script>
+        $(document).ready(function()
+        {  
+            $("#boton1").click(function() {  
+                $("#intro").css("font-size", "50%");
+                $("#intro").css("color", "red");  
+                $(".par").css("font-size", "50%");
+                $(".par").css("color", "red");
+            }); 
+            $("#boton2").click(function() {  
+                $("#intro").css("font-size", "200%");
+                $("#intro").css("color", "blue"); 
+                $(".par").css("font-size", "200%");
+                $(".par").css("color", "blue");
+            });
+        }); 
+    </script>
+
+
+</body>
+</html>

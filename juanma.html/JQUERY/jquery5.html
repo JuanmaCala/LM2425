@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 5</title>
+    <script src="jquery-3.7.1.js"></script>  <!--Inclusion de jQuery-->
+</head>
+<body>
+    
+    <h1 id="intro">Introduccion jQuery 5</h1>
+    <h1>Aparecer y Desaparecer</h1>
+    <p>Parrafo Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa delectus, aspernatur iusto reiciendis sit reprehenderit veniam atque eius inventore est, ad beatae ut dolorum quas perferendis quis ab earum tempora?</p>
+    <p class="par">Esto es un parrafo de ejemplo para ver que cosas hace jQuery. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis illo quia laborum, commodi similique. Quia laudantium iusto eius perferendis, aut aspernatur voluptatum dolores molestias qui facere? Ratione, atque nulla.</p>
+    <p>Otro Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem sequi fugit eveniet explicabo molestias distinctio rerum deserunt mollitia aspernatur tempore. Earum dignissimos distinctio sunt omnis voluptas quibusdam non repellat illum?</p>
+    <p class="par">Otro Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque delectus beatae soluta possimus vitae, dolore quidem expedita voluptas non nobis facere exercitationem? Quibusdam excepturi quidem, modi in accusantium ipsa aspernatur?</p>
+    
+    <button id="boton1">Desaparecer</button>
+    <button id="boton2">Aparecer</button>
+    <button id="boton3">Alternar</button>
+
+
+    <script>
+        $(document).ready(function()
+        {  
+            $("#boton1").click(function() {  
+                $("p").fadeOut(5000);    //5000 milisegundos tarda en desaparecer//
+            }); 
+
+            $("#boton2").click(function() {  
+                $("p").fadeIn(2500);     //2500 milisegundos tarda en desaparecer//
+            }); 
+
+            $("#boton3").click(function() {  
+                $("p").fadeToggle();
+            }); 
+        }); 
+    </script>
+
+
+</body>
+</html>

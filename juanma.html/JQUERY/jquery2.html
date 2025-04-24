@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 2</title>
+    <script src="jquery-3.7.1.js"></script> 
+</head>
+<body>
+    <h1 id="intro">Introduccion jQuery 2</h1>
+    <h1>Otro titulo H1</h1>
+    <p>Esto es un parrafo Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati labore dolor, libero rem nesciunt, quam natus similique qui autem est placeat! Id rem at amet hic minus pariatur totam dolorum.</p>
+    <p class="par">Esto es un parrafo de ejemplo para ver que cosas hace jQuery. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis illo quia laborum, commodi similique. Quia laudantium iusto eius perferendis, aut aspernatur voluptatum dolores molestias qui facere? Ratione, atque nulla.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente itaque error cupiditate unde architecto totam quo iusto consequatur impedit, cumque placeat molestias sint excepturi amet quod ratione sequi qui exercitationem?</p>
+    <p class="par">Ultimo Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptates, nam animi dolorem similique, praesentium iusto perspiciatis incidunt cupiditate sapiente sunt doloremque inventore iste voluptate, saepe tempore aut. Beatae, blanditiis.</p>
+    
+    <button id="boton1">Ocultar</button>
+    <button id="boton2">Aparecer</button>
+
+    <script>
+        $(document).ready(function()
+        {  
+            $("#boton1").click(function() {  
+                $("#intro").hide();  
+                $(".par").hide();
+            }); 
+            $("#boton2").click(function() {  
+                $("#intro").show(); 
+                $(".par").show();
+            });
+        }); 
+    </script>
+
+</body>
+</html>

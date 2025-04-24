@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 10</title>
+    <script src="jquery-3.7.1.js"></script>
+
+    </head>
+    <body>
+
+        <h1>Prueba del método val() de jQuery</h1>
+        
+        <label for="miInput">Escribe algo:</label>
+        <input type="text" id="miInput" placeholder="Ingresa tu texto aquí">
+
+        <button id="mostrarValor">Mostrar valor</button>
+
+        <script>
+            $(document).ready(function() {
+                // Al hacer clic en el botón, obtenemos el valor del input
+                $("#mostrarValor").click(function() {
+                    var valorInput = $("#miInput").val();  // Obtiene el valor del input con id="miInput"
+                    alert("El valor ingresado en el campo de texto es: " + valorInput);  // Muestra el valor en un alert
+                });
+            });
+        </script>
+
+    </body>
+</html>

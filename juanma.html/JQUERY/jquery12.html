@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 11</title>
+    <script src="jquery-3.7.1.js"></script>
+
+    <style>
+        #cajaTexto {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+    <body>
+
+        <h1>Prueba del método empty() de jQuery</h1>
+        
+        <div id="cajaTexto">
+            Este es el texto dentro de la caja, si pulsas sobre el boton de abajo de Vaciar contenido se vacia el contenido de esta caja.
+        </div>
+
+        <button id="vaciarContenido">Vaciar contenido</button>
+        <button id="mostrarContenido">Mostrar contenido</button>
+
+
+        <script>
+            $(document).ready(function() {
+                // Al hacer clic en el botón, vaciamos el contenido de la caja
+                $("#vaciarContenido").click(function() {
+                    $("#cajaTexto").empty(); // Vacía el contenido de la caja con id="cajaTexto" 
+                });
+                
+                $("#mostrarContenido").click(function() {
+                    $("#cajaTexto").html("Este es el texto dentro de la caja, si pulsas sobre el boton de abajo de Vaciar contenido se vacia el contenido de esta caja.");                 }); // Muestra el contenido de la caja con id="cajaTexto"  
+            });
+        </script>
+    </body>
+</html>

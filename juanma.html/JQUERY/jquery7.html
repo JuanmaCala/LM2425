@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 7</title>
+    <script src="jquery-3.7.1.js"></script>  
+</head>
+<body>
+    
+    <h1 id="intro">Introduccion jQuery 7</h1>
+    <h1>Verificar</h1>
+    <p>Parrafo Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+    <p class="par">Esto es un parrafo de ejemplo para ver que cosas hace jQuery...</p>
+    <p>Otro Lorem ipsum dolor, sit amet consectetur adipisicing elit...</p>
+    <p class="par">Otro Lorem ipsum dolor sit amet consectetur, adipisicing elit...</p>
+    
+    <button id="boton1">Verificar clase ".par"</button>
+    <button id="boton2">Verificar ID "#intro"</button>
+
+<script>
+$(document).ready(function() {
+            // Función para verificar si un selector existe
+            function verificarElemento(selector) {
+                console.log(
+                    $(selector).length 
+                    ? `✅ El elemento '${selector}' existe.`
+                    : `❌ El elemento '${selector}' NO existe.`
+                );
+            }
+
+            // Al hacer clic en boton1, verificamos si existe un elemento con la clase .par
+            $("#boton1").click(function() {
+                verificarElemento(".par"); // Puedes cambiar este selector
+            });
+
+            // Al hacer clic en boton2, verificamos si existe un elemento con id #intro
+            $("#boton2").click(function() {
+                verificarElemento("#intro");
+            });
+        });
+</script>
+
+</body>
+</html>

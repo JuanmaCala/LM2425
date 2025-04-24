@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 3</title>
+    <script src="jquery-3.7.1.js"></script> 
+</head>
+<body>
+    
+    <h1 id="intro">Introduccion jQuery 3</h1>
+    <h1>Otro titulo H1</h1>
+    <p>Parrafo Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem possimus, eaque explicabo labore id amet dolores provident reiciendis sed totam officiis ipsam, laboriosam quia in vel. Magnam accusantium aperiam iste!</p>
+    <p class="par">Esto es un parrafo de ejemplo para ver que cosas hace jQuery. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officiis illo quia laborum, commodi similique. Quia laudantium iusto eius perferendis, aut aspernatur voluptatum dolores molestias qui facere? Ratione, atque nulla.</p>
+    <p>Otro Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem sequi fugit eveniet explicabo molestias distinctio rerum deserunt mollitia aspernatur tempore. Earum dignissimos distinctio sunt omnis voluptas quibusdam non repellat illum?</p>
+    <p class="par">Otro parrafo Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero molestias mollitia recusandae placeat nobis eos repellat sed quisquam, qui eius porro voluptatum rem et laborum architecto suscipit tenetur illum unde.</p>
+    
+    <button id="boton1">Menos Grande</button>
+    <button id="boton2">Mas Grande</button>
+
+    <script>
+        $(document).ready(function()
+        {  
+            $("#boton1").click(function() {  
+                $("#intro").css("font-size", "50%");  
+                $(".par").css("font-size", "50%");
+            }); 
+            $("#boton2").click(function() {  
+                $("#intro").css("font-size", "200%"); 
+                $(".par").css("font-size", "200%");
+            });
+        }); 
+    </script>
+
+
+</body>
+</html>
