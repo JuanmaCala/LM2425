@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego de Clics Aleatorios</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #Area {
+      width: 400px;
+      height: 300px;
+      margin: 20px auto;
+      border: 2px solid black;
+      position: relative;
+      background: #f9f9f9;
+    }
+    .circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: red;
+      position: absolute;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Juego de Clics Aleatorios</h2>
+  <p id="record">Récord: 0</p>
+  <button id="iniciar">Iniciar Juego</button>
+  <div id="Area"></div>
+  <p id="puntos">Puntuación: 0</p>
+
+  <script>
+    let puntos = 0;
+    let intervalo;
+    let tiempo;
+
+    function cargarRecord() {
+      let record = localStorage.getItem("record") || 0;
+      $("#record").text("Récord: " + record);
+    }
+
+    function iniciarJuego() {
+      puntos = 0;
+      $("#puntos").text("Puntuación: 0");
+      $("#Area").empty();
+      intervalo = setInterval(crearCirculo, 800);
+      tiempo = setTimeout(() => {
+        clearInterval(intervalo);
+        $("#Area").empty();
+        actualizarRecord();
+        alert("¡Tiempo terminado! Puntuación: " + puntos);
+      }, 30000);
+    }
+
+    function crearCirculo() {
+      let x = Math.random() * ($("#Area").width() - 30);
+      let y = Math.random() * ($("#Area").height() - 30);
+      let $c = $("<div class='circle'></div>");
+      $c.css({ left: x, top: y });
+      $c.click(function () {
+        puntos++;
+        $("#puntos").text("Puntuación: " + puntos);
+        $(this).remove();
+      });
+      $("#Area").append($c);
+      setTimeout(() => $c.remove(), 1000);
+    }
+
+    function actualizarRecord() {
+      let record = localStorage.getItem("record") || 0;
+      if (puntos > record) {
+        localStorage.setItem("record", puntos);
+        $("#record").text("Récord: " + puntos);
+      }
+    }
+
+    $(function () {
+      cargarRecord();
+      $("#iniciar").click(iniciarJuego);
+    });
+  </script>
+</body>
+</html>
